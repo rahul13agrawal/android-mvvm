@@ -9,9 +9,9 @@ import java.util.List;
 
 public class WordViewModel extends AndroidViewModel {
 
-    private WordRepository mRepository;
+    private final WordRepository mRepository;
 
-    private LiveData<List<Word>> mAllWords;
+    private final LiveData<List<Word>> mAllWords;
 
     public WordViewModel(Application application) {
         super(application);
@@ -23,5 +23,7 @@ public class WordViewModel extends AndroidViewModel {
         return mAllWords;
     }
 
-    public void insert(Word word) { mRepository.insert(word); }
+    public void insert(Word word) {
+        mRepository.insert(word);
+    }
 }

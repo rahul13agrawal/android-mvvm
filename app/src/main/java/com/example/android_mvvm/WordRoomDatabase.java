@@ -13,7 +13,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 public abstract class WordRoomDatabase extends RoomDatabase {
 
     private static volatile WordRoomDatabase INSTANCE;
-    private static RoomDatabase.Callback sRoomDatabaseCallback =
+    private static final RoomDatabase.Callback sRoomDatabaseCallback =
             new RoomDatabase.Callback() {
 
                 @Override
